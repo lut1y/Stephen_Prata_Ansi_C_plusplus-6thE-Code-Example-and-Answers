@@ -1,0 +1,75 @@
+# Project: chapter02
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = chapter02_private.res
+OBJ      = main.o carrots.o convert.o getinfo.o myfirst.o ourfunc.o sqrt.o test.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o $(RES)
+LINKOBJ  = main.o carrots.o convert.o getinfo.o myfirst.o ourfunc.o sqrt.o test.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter02.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+carrots.o: carrots.cpp
+	$(CPP) -c carrots.cpp -o carrots.o $(CXXFLAGS)
+
+convert.o: convert.cpp
+	$(CPP) -c convert.cpp -o convert.o $(CXXFLAGS)
+
+getinfo.o: getinfo.cpp
+	$(CPP) -c getinfo.cpp -o getinfo.o $(CXXFLAGS)
+
+myfirst.o: myfirst.cpp
+	$(CPP) -c myfirst.cpp -o myfirst.o $(CXXFLAGS)
+
+ourfunc.o: ourfunc.cpp
+	$(CPP) -c ourfunc.cpp -o ourfunc.o $(CXXFLAGS)
+
+sqrt.o: sqrt.cpp
+	$(CPP) -c sqrt.cpp -o sqrt.o $(CXXFLAGS)
+
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)
+
+task1.o: task1.cpp
+	$(CPP) -c task1.cpp -o task1.o $(CXXFLAGS)
+
+task2.o: task2.cpp
+	$(CPP) -c task2.cpp -o task2.o $(CXXFLAGS)
+
+task3.o: task3.cpp
+	$(CPP) -c task3.cpp -o task3.o $(CXXFLAGS)
+
+task4.o: task4.cpp
+	$(CPP) -c task4.cpp -o task4.o $(CXXFLAGS)
+
+task5.o: task5.cpp
+	$(CPP) -c task5.cpp -o task5.o $(CXXFLAGS)
+
+task6.o: task6.cpp
+	$(CPP) -c task6.cpp -o task6.o $(CXXFLAGS)
+
+task7.o: task7.cpp
+	$(CPP) -c task7.cpp -o task7.o $(CXXFLAGS)
+
+chapter02_private.res: chapter02_private.rc 
+	$(WINDRES) -i chapter02_private.rc --input-format=rc -o chapter02_private.res -O coff 
+

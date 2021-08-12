@@ -1,0 +1,126 @@
+# Project: chapter05
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter05_private.res
+OBJ      = main.o bigstep.o block.o compstr1.o compstr2.o dowhile.o equal.o express.o forloop.o formore.o forstr1.o forstr2.o nested.o nestedcl.o num_test.o plus_one.o textin1.o textin2.o textin3.o textin4.o waiting.o while.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o $(RES)
+LINKOBJ  = main.o bigstep.o block.o compstr1.o compstr2.o dowhile.o equal.o express.o forloop.o formore.o forstr1.o forstr2.o nested.o nestedcl.o num_test.o plus_one.o textin1.o textin2.o textin3.o textin4.o waiting.o while.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter05.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+bigstep.o: bigstep.cpp
+	$(CPP) -c bigstep.cpp -o bigstep.o $(CXXFLAGS)
+
+block.o: block.cpp
+	$(CPP) -c block.cpp -o block.o $(CXXFLAGS)
+
+compstr1.o: compstr1.cpp
+	$(CPP) -c compstr1.cpp -o compstr1.o $(CXXFLAGS)
+
+compstr2.o: compstr2.cpp
+	$(CPP) -c compstr2.cpp -o compstr2.o $(CXXFLAGS)
+
+dowhile.o: dowhile.cpp
+	$(CPP) -c dowhile.cpp -o dowhile.o $(CXXFLAGS)
+
+equal.o: equal.cpp
+	$(CPP) -c equal.cpp -o equal.o $(CXXFLAGS)
+
+express.o: express.cpp
+	$(CPP) -c express.cpp -o express.o $(CXXFLAGS)
+
+forloop.o: forloop.cpp
+	$(CPP) -c forloop.cpp -o forloop.o $(CXXFLAGS)
+
+formore.o: formore.cpp
+	$(CPP) -c formore.cpp -o formore.o $(CXXFLAGS)
+
+forstr1.o: forstr1.cpp
+	$(CPP) -c forstr1.cpp -o forstr1.o $(CXXFLAGS)
+
+forstr2.o: forstr2.cpp
+	$(CPP) -c forstr2.cpp -o forstr2.o $(CXXFLAGS)
+
+nested.o: nested.cpp
+	$(CPP) -c nested.cpp -o nested.o $(CXXFLAGS)
+
+nestedcl.o: nestedcl.cpp
+	$(CPP) -c nestedcl.cpp -o nestedcl.o $(CXXFLAGS)
+
+num_test.o: num_test.cpp
+	$(CPP) -c num_test.cpp -o num_test.o $(CXXFLAGS)
+
+plus_one.o: plus_one.cpp
+	$(CPP) -c plus_one.cpp -o plus_one.o $(CXXFLAGS)
+
+textin1.o: textin1.cpp
+	$(CPP) -c textin1.cpp -o textin1.o $(CXXFLAGS)
+
+textin2.o: textin2.cpp
+	$(CPP) -c textin2.cpp -o textin2.o $(CXXFLAGS)
+
+textin3.o: textin3.cpp
+	$(CPP) -c textin3.cpp -o textin3.o $(CXXFLAGS)
+
+textin4.o: textin4.cpp
+	$(CPP) -c textin4.cpp -o textin4.o $(CXXFLAGS)
+
+waiting.o: waiting.cpp
+	$(CPP) -c waiting.cpp -o waiting.o $(CXXFLAGS)
+
+while.o: while.cpp
+	$(CPP) -c while.cpp -o while.o $(CXXFLAGS)
+
+task1.o: task1.cpp
+	$(CPP) -c task1.cpp -o task1.o $(CXXFLAGS)
+
+task2.o: task2.cpp
+	$(CPP) -c task2.cpp -o task2.o $(CXXFLAGS)
+
+task3.o: task3.cpp
+	$(CPP) -c task3.cpp -o task3.o $(CXXFLAGS)
+
+task4.o: task4.cpp
+	$(CPP) -c task4.cpp -o task4.o $(CXXFLAGS)
+
+task5.o: task5.cpp
+	$(CPP) -c task5.cpp -o task5.o $(CXXFLAGS)
+
+task6.o: task6.cpp
+	$(CPP) -c task6.cpp -o task6.o $(CXXFLAGS)
+
+task7.o: task7.cpp
+	$(CPP) -c task7.cpp -o task7.o $(CXXFLAGS)
+
+task8.o: task8.cpp
+	$(CPP) -c task8.cpp -o task8.o $(CXXFLAGS)
+
+task9.o: task9.cpp
+	$(CPP) -c task9.cpp -o task9.o $(CXXFLAGS)
+
+task10.o: task10.cpp
+	$(CPP) -c task10.cpp -o task10.o $(CXXFLAGS)
+
+chapter05_private.res: chapter05_private.rc 
+	$(WINDRES) -i chapter05_private.rc --input-format=rc -o chapter05_private.res -O coff 
+

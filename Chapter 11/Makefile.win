@@ -1,0 +1,105 @@
+# Project: chapter11
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter11_private.res
+OBJ      = main.o mytime0.o usetime0.o mytime1.o usetime1.o mytime2.o usetime2.o mytime3.o usetime3.o vect.o randwalk.o stonewt1.o stonewt.o stone.o stone1.o task1.o task2.o task2_.o task3.o task4.o task5.o task5_.o task6.o task7.o complex0.o $(RES)
+LINKOBJ  = main.o mytime0.o usetime0.o mytime1.o usetime1.o mytime2.o usetime2.o mytime3.o usetime3.o vect.o randwalk.o stonewt1.o stonewt.o stone.o stone1.o task1.o task2.o task2_.o task3.o task4.o task5.o task5_.o task6.o task7.o complex0.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter11.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+mytime0.o: mytime0.cpp
+	$(CPP) -c mytime0.cpp -o mytime0.o $(CXXFLAGS)
+
+usetime0.o: usetime0.cpp
+	$(CPP) -c usetime0.cpp -o usetime0.o $(CXXFLAGS)
+
+mytime1.o: mytime1.cpp
+	$(CPP) -c mytime1.cpp -o mytime1.o $(CXXFLAGS)
+
+usetime1.o: usetime1.cpp
+	$(CPP) -c usetime1.cpp -o usetime1.o $(CXXFLAGS)
+
+mytime2.o: mytime2.cpp
+	$(CPP) -c mytime2.cpp -o mytime2.o $(CXXFLAGS)
+
+usetime2.o: usetime2.cpp
+	$(CPP) -c usetime2.cpp -o usetime2.o $(CXXFLAGS)
+
+mytime3.o: mytime3.cpp
+	$(CPP) -c mytime3.cpp -o mytime3.o $(CXXFLAGS)
+
+usetime3.o: usetime3.cpp
+	$(CPP) -c usetime3.cpp -o usetime3.o $(CXXFLAGS)
+
+vect.o: vect.cpp
+	$(CPP) -c vect.cpp -o vect.o $(CXXFLAGS)
+
+randwalk.o: randwalk.cpp
+	$(CPP) -c randwalk.cpp -o randwalk.o $(CXXFLAGS)
+
+stonewt1.o: stonewt1.cpp
+	$(CPP) -c stonewt1.cpp -o stonewt1.o $(CXXFLAGS)
+
+stonewt.o: stonewt.cpp
+	$(CPP) -c stonewt.cpp -o stonewt.o $(CXXFLAGS)
+
+stone.o: stone.cpp
+	$(CPP) -c stone.cpp -o stone.o $(CXXFLAGS)
+
+stone1.o: stone1.cpp
+	$(CPP) -c stone1.cpp -o stone1.o $(CXXFLAGS)
+
+task1.o: task1.cpp
+	$(CPP) -c task1.cpp -o task1.o $(CXXFLAGS)
+
+task2.o: task2.cpp
+	$(CPP) -c task2.cpp -o task2.o $(CXXFLAGS)
+
+task2_.o: task2_.cpp
+	$(CPP) -c task2_.cpp -o task2_.o $(CXXFLAGS)
+
+task3.o: task3.cpp
+	$(CPP) -c task3.cpp -o task3.o $(CXXFLAGS)
+
+task4.o: task4.cpp
+	$(CPP) -c task4.cpp -o task4.o $(CXXFLAGS)
+
+task5.o: task5.cpp
+	$(CPP) -c task5.cpp -o task5.o $(CXXFLAGS)
+
+task5_.o: task5_.cpp
+	$(CPP) -c task5_.cpp -o task5_.o $(CXXFLAGS)
+
+task6.o: task6.cpp
+	$(CPP) -c task6.cpp -o task6.o $(CXXFLAGS)
+
+task7.o: task7.cpp
+	$(CPP) -c task7.cpp -o task7.o $(CXXFLAGS)
+
+complex0.o: complex0.cpp
+	$(CPP) -c complex0.cpp -o complex0.o $(CXXFLAGS)
+
+chapter11_private.res: chapter11_private.rc 
+	$(WINDRES) -i chapter11_private.rc --input-format=rc -o chapter11_private.res -O coff 
+

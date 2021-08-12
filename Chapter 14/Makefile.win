@@ -1,0 +1,108 @@
+# Project: chapter14
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter14_private.res
+OBJ      = main.o studentc.o use_stuc.o studenti.o use_stui.o worker0.o worktest.o workermi.o workmi.o stacktem.o stckoptr1.o twod.o pairs.o tempmemb.o tempparm.o frnd2tmp.o tmp2tmp.o manyfrnd.o task1.o task1_.o task2.o task3.o person.o task4.o task5.o emp.o $(RES)
+LINKOBJ  = main.o studentc.o use_stuc.o studenti.o use_stui.o worker0.o worktest.o workermi.o workmi.o stacktem.o stckoptr1.o twod.o pairs.o tempmemb.o tempparm.o frnd2tmp.o tmp2tmp.o manyfrnd.o task1.o task1_.o task2.o task3.o person.o task4.o task5.o emp.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter14.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+studentc.o: studentc.cpp
+	$(CPP) -c studentc.cpp -o studentc.o $(CXXFLAGS)
+
+use_stuc.o: use_stuc.cpp
+	$(CPP) -c use_stuc.cpp -o use_stuc.o $(CXXFLAGS)
+
+studenti.o: studenti.cpp
+	$(CPP) -c studenti.cpp -o studenti.o $(CXXFLAGS)
+
+use_stui.o: use_stui.cpp
+	$(CPP) -c use_stui.cpp -o use_stui.o $(CXXFLAGS)
+
+worker0.o: worker0.cpp
+	$(CPP) -c worker0.cpp -o worker0.o $(CXXFLAGS)
+
+worktest.o: worktest.cpp
+	$(CPP) -c worktest.cpp -o worktest.o $(CXXFLAGS)
+
+workermi.o: workermi.cpp
+	$(CPP) -c workermi.cpp -o workermi.o $(CXXFLAGS)
+
+workmi.o: workmi.cpp
+	$(CPP) -c workmi.cpp -o workmi.o $(CXXFLAGS)
+
+stacktem.o: stacktem.cpp
+	$(CPP) -c stacktem.cpp -o stacktem.o $(CXXFLAGS)
+
+stckoptr1.o: stckoptr1.cpp
+	$(CPP) -c stckoptr1.cpp -o stckoptr1.o $(CXXFLAGS)
+
+twod.o: twod.cpp
+	$(CPP) -c twod.cpp -o twod.o $(CXXFLAGS)
+
+pairs.o: pairs.cpp
+	$(CPP) -c pairs.cpp -o pairs.o $(CXXFLAGS)
+
+tempmemb.o: tempmemb.cpp
+	$(CPP) -c tempmemb.cpp -o tempmemb.o $(CXXFLAGS)
+
+tempparm.o: tempparm.cpp
+	$(CPP) -c tempparm.cpp -o tempparm.o $(CXXFLAGS)
+
+frnd2tmp.o: frnd2tmp.cpp
+	$(CPP) -c frnd2tmp.cpp -o frnd2tmp.o $(CXXFLAGS)
+
+tmp2tmp.o: tmp2tmp.cpp
+	$(CPP) -c tmp2tmp.cpp -o tmp2tmp.o $(CXXFLAGS)
+
+manyfrnd.o: manyfrnd.cpp
+	$(CPP) -c manyfrnd.cpp -o manyfrnd.o $(CXXFLAGS)
+
+task1.o: task1.cpp
+	$(CPP) -c task1.cpp -o task1.o $(CXXFLAGS)
+
+task1_.o: task1_.cpp
+	$(CPP) -c task1_.cpp -o task1_.o $(CXXFLAGS)
+
+task2.o: task2.cpp
+	$(CPP) -c task2.cpp -o task2.o $(CXXFLAGS)
+
+task3.o: task3.cpp
+	$(CPP) -c task3.cpp -o task3.o $(CXXFLAGS)
+
+person.o: person.cpp
+	$(CPP) -c person.cpp -o person.o $(CXXFLAGS)
+
+task4.o: task4.cpp
+	$(CPP) -c task4.cpp -o task4.o $(CXXFLAGS)
+
+task5.o: task5.cpp
+	$(CPP) -c task5.cpp -o task5.o $(CXXFLAGS)
+
+emp.o: emp.cpp
+	$(CPP) -c emp.cpp -o emp.o $(CXXFLAGS)
+
+chapter14_private.res: chapter14_private.rc 
+	$(WINDRES) -i chapter14_private.rc --input-format=rc -o chapter14_private.res -O coff 
+

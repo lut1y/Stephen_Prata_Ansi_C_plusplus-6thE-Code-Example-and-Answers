@@ -1,0 +1,73 @@
+#include <iostream>
+
+int arrayone(void);
+int strings(void);
+int instr1(void);
+int instr2(void);
+int instr3(void);
+int numstr();
+int strtype1();
+int strtype2();
+int strtype3();
+int strtype4();
+int structur();
+int assgn_st();
+int arrstruc();
+int address();
+int pointer();
+int use_new();
+int arraynew();
+int addpntrs();
+int ptrstr();
+int newstrct();
+int delete_();
+int mixtypes();
+int choices();
+int task1();
+int task2();
+int task3();
+int task4();
+int task5();
+int task6();
+int task7();
+int task8();
+int task9();
+int task10();
+
+int main(int argc, char** argv) {
+//	std::cout << "Hello world!\n";
+//	arrayone();
+//	strings();
+//	instr1();
+//	instr2();
+//	instr3();
+//	numstr();
+//	strtype1();
+//	strtype2();
+//	strtype3();
+//	strtype4();
+//	structur();
+//	assgn_st();
+//	arrstruc();
+//	address();
+//	pointer();
+//	use_new();
+//	arraynew();
+//	addpntrs();
+//	ptrstr();
+//	delete_();
+//	mixtypes();
+//	choices();
+//	task1();
+//	task2();
+//	task3();
+//	task4();
+//	task5();
+//	task6();
+//	task7();
+//	task8();
+//	task9();
+	task10();
+	
+	return 0;
+}
